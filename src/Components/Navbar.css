@@ -12,7 +12,9 @@
   left: 0;
   width: 100%; /* Full width */
   display: flex;
-  background-color: #fff;
+  background-color: #ffffffaa;
+  backdrop-filter: blur(10px); /* Blur the background behind the navbar */
+  -webkit-backdrop-filter: blur(10px); /* For Safari support */
   justify-content: space-between; /* Space between left, center, and right sections */
   align-items: center;
   padding: 1rem 0; /* Remove side padding */

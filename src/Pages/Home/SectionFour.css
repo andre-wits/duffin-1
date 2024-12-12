@@ -1,0 +1,80 @@
+/* Two-Column Layout */
+.sectionfour-layout {
+  margin-top: 13rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* 1/3 and 2/3 column widths */
+  gap: 0.4rem; /* Space between the two columns */
+  padding: 1.4rem; /* Padding around the section */
+  box-sizing: border-box; /* Include padding in width/height calculations */
+}
+
+/* First Column */
+.sectionfour-column-1 {
+  padding: 1.5rem; /* Add padding inside */
+}
+
+.sectionfour-header {
+  font-size: 2rem; /* Adjust header size */
+  font-weight: 300;
+  color: #000000; /* Darker text color */
+  margin: 0; /* Remove default margin */
+}
+
+/* Second Column */
+.sectionfour-column-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Grid */
+.sectionfour-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  grid-template-rows: repeat(2, 1fr); /* 3 rows */
+  gap: 0.5rem; /* Space between grid items */
+  width: 100%; /* Full width of the column */
+  height: 100%; /* Full height of the column */
+}
+
+/* Grid Items */
+.sectionfour-grid-item {
+  position: relative; /* For positioning text content */
+  background-color: #ffffff; /* Light grey background for grid items */
+  padding-left: 0.5rem; /* Padding inside each item */
+  padding-bottom: 5rem;
+  width: 80%;
+  flex-direction: column;
+  justify-content: flex-end; /* Push text content to the bottom */
+  overflow: hidden; /* Ensure content doesn't overflow the box */
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease; /* Hover effects */
+}
+
+.sectionfour-grid-item:hover {
+  transform: translateY(-1px); /* Slight lift on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.025); /* Stronger shadow on hover */
+}
+
+/* Text Content Inside Grid Items */
+.sectionfour-grid-header {
+  font-size: 5rem; /* Header size */
+  font-weight: bold;
+  margin: 0 0 0.5rem 0;
+  color: #000000; /* Darker text color */
+}
+
+.sectionfour-grid-subheading {
+  font-size: 2rem; /* Subheading size */
+  font-weight: 500;
+  margin: 0 0 0.5rem 0; /* Space below subheading */
+  color: #545454; /* Medium grey text color */
+}
+
+.sectionfour-grid-paragraph {
+  font-size: 1.2rem; /* Paragraph font size */
+  color: #787878; /* Lighter grey text color */
+  margin: 0; /* Remove default margin */
+  text-align: left; /* Align text to the left */
+}

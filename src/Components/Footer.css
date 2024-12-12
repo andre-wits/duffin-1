@@ -25,7 +25,7 @@
 /* Icon Styling */
 .footer-icon {
   font-size: 2rem; /* Icon size */
-  color: #b0b0b0; /* Wood-like color */
+  color: #808080; /* Wood-like color */
   margin-bottom: 2rem; /* Space between icon and links */
 }
 
@@ -40,23 +40,30 @@
 }
 
 .footer-link {
-  text-decoration: none; /* Remove underline */
+  position: relative; /* Position the link for pseudo-element positioning */
+  text-decoration: none; /* Remove default underline */
   color: #7b7b7b; /* Light grey text for links */
   font-size: 1rem;
-  transition: all 0.3s ease; /* Smooth hover effect */
+  transition: color 0.9s ease; /* Smooth color transition */
+}
+
+.footer-link::after {
+  content: ''; /* Create a pseudo-element for the underline */
+  position: absolute;
+  bottom: 0; /* Align underline to the bottom of the text */
+  left: 0; /* Start from the left */
+  width: 0; /* Initially hide the underline */
+  height: 1px; /* Thickness of the underline */
+  background-color: #000; /* Underline color */
+  transition: width 0.3s ease; /* Smooth animation for underline width */
 }
 
 .footer-link:hover {
-  color: #fff; /* Brighten the link color on hover */
-  text-decoration: underline; /* Underline on hover */
+  color: #000; /* Brighten the link color on hover */
 }
 
-/* Horizontal Line */
-.footer-line {
-  border: none; /* Remove default border styling */
-  border-top: 1px solid #444; /* Thin grey line */
-  margin: 1rem auto; /* Add spacing above and below the line */
-  width: 70vw;
+.footer-link:hover::after {
+  width: 100%; /* Expand the underline to full width */
 }
 
 /* Rights Reserved Message */

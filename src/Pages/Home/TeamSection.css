@@ -1,0 +1,67 @@
+/* Team Section Styling */
+.team-section {
+  padding: 2rem;
+  text-align: center;
+  width: 90vw;
+  margin: 0 auto;
+}
+
+.team-header {
+  font-size: 2rem; /* Adjust header size */
+  font-weight: 300;
+  color: #000000; /* Darker text color */
+  margin-top: 5rem; /* Remove default margin */
+  padding-left: 3rem;
+}
+
+/* Team Grid Layout */
+.team-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr; /* Four columns */
+  column-gap: 2rem; /* Space between grid items */
+  row-gap: 4rem;
+  align-items: center; /* Vertically align content */
+  justify-content: center; /* Center content horizontally */
+}
+
+/* Image Styling */
+.team-image-container {
+  display: flex;
+  justify-content: center;
+}
+
+.team-image {
+  width: 350px;
+  height: 480px;
+  border-radius: 12px; /* Rounded border */
+  object-fit: cover; /* Ensure image scales properly */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease; /* Smooth hover effects */
+}
+
+.team-image:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+/* Text Styling */
+.team-text-container {
+  text-align: left; /* Align text to the left */
+  width: 90%;
+}
+
+.team-name {
+  font-size: 2.3rem;
+  font-weight: bold;
+  color: #000000;
+  margin: 0 0 0.5rem 0; /* Space below name */
+}
+
+.team-description {
+  font-size: 1rem;
+  color: #656565;
+  margin: 0; /* Remove default margin */
+  line-height: 1.5; /* Improve readability */
+}

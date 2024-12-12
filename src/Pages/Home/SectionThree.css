@@ -1,0 +1,88 @@
+/* Main Grid: Two Columns */
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  gap: 0.7rem; /* Space between the columns */
+  padding: 2rem; /* Padding around the grid */
+  box-sizing: border-box; /* Include padding in width/height calculations */
+  width: 70vw;
+  margin: 0 auto;
+}
+
+.sectionthree-headingbox {
+  display: flex;
+}
+
+.custom-icon {
+  font-size: 0.1rem;
+}
+
+/* Each Column */
+.sectionthree-column {
+  display: grid;
+  gap: 1rem; /* Space between rows in each column */
+}
+
+.services-heading {
+  margin-top: 6rem;
+  padding-left: 3rem;
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+/* First Column: Grid of 4 Products in a 2x2 Layout */
+.grid-of-4 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns per row */
+  grid-template-rows: repeat(2, 1fr); /* 2 rows */
+  gap: 0.8rem; /* Space between boxes */
+}
+
+/* Product Card Styling */
+.product-card {
+  position: relative; /* For text overlay */
+  width: 100%; /* Full width of the grid cell */
+  height: 100%; /* Full height of the grid cell */
+  border-radius: 2px; /* Rounded corners */
+  overflow: hidden; /* Ensure content stays within rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease; /* Hover effects */
+}
+
+.product-card:hover {
+  transform: translateY(-5px); /* Lift the card slightly */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+/* Product Image */
+.product-image {
+  width: 100%; /* Ensure the image covers the card width */
+  height: 100%; /* Ensure the image covers the card height */
+  object-fit: cover; /* Ensure the image scales properly */
+}
+
+/* Text Description Overlay */
+.product-description {
+  position: absolute;
+  bottom: 1rem; /* Align text at the bottom */
+  width: 90%; /* Full width of the card */
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0; /* Remove default paragraph margin */
+  padding: 1.2rem 1rem; /* Add padding inside the text box */
+  background-color: rgb(255, 255, 255); /* Semi-transparent black background */
+  color: #000; /* White text for readability */
+  font-size: 1.1rem; /* Adjust font size */
+  font-weight: 500;
+  text-align: left; /* Center the text */
+  border-radius: 7px;
+  box-sizing: border-box; /* Include padding in width/height calculations */
+  transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+/* Single Box Styling */
+.single-box {
+  height: 24.5rem; /* Fixed height for single-row boxes */
+}
