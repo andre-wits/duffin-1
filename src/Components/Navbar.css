@@ -1,0 +1,119 @@
+@font-face {
+  font-family: 'Italiana';
+  src: url('../assets/fonts/Italiana.ttf') format('truetype'); /* Adjust the path based on your file location */
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Navbar Styling */
+.navbar {
+  position: sticky; /* Fix the navbar at the top of the screen */
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width */
+  display: flex;
+  background-color: #fff;
+  justify-content: space-between; /* Space between left, center, and right sections */
+  align-items: center;
+  padding: 1rem 0; /* Remove side padding */
+  z-index: 1000; /* Ensure it’s above other elements */
+}
+
+/* .logo {
+  font-size: 1.2rem;
+  padding: 0 0.7rem;
+} */
+
+/* Navbar Container */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* Left Section (Links) */
+.navbar-left {
+  display: flex;
+  flex-direction: column; /* Stack links vertically */
+  gap: 0.7rem; /* Add spacing between links */
+  padding-left: 3rem; /* Slight padding for breathing room */
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #444; /* Neutral color */
+  font-size: 1.05rem;
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+  letter-spacing: 0.03rem;
+  position: relative; /* Allows positioning the arrow relative to the link */
+  display: inline-flex; /* To align the arrow inline with the text */
+  align-items: center; /* Vertically center the arrow */
+}
+
+.nav-link:hover,
+.nav-link.active {
+  font-weight: bold;
+  color: #000; /* Darker color when active or hovered */
+  transform: scale(1.1); /* Grow smoothly */
+}
+
+/* Logo Section */
+.navbar-logo {
+  text-align: center;
+  display: flex;
+  flex: 1; /* Center the logo between left and right sections */
+}
+
+.navbar-logo a {
+  font-size: 1.8rem; /* Adjust size to fit the navbar */
+  font-family: 'Italiana';
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Keep the same color as the parent element */
+  pointer-events: none;
+  cursor: default; /* No pointer cursor */
+  justify-content: center;
+  align-items: center;
+}
+
+/* Right Section (Social Media Icons) */
+.navbar-right {
+  display: flex;
+  flex-direction: column; /* Stack icons vertically */
+  gap: 1rem; /* Add spacing between icons */
+  padding-right: 2rem; /* Slight padding for breathing room */
+}
+
+.social-link {
+  color: #444; /* Neutral icon color */
+  font-size: 1.5rem;
+  transition: all 0.3s ease; /* Smooth hover effect */
+}
+
+.social-link:hover {
+  color: #8b4513; /* Wood-like color on hover */
+  transform: scale(1.2); /* Slightly enlarge on hover */
+}
+
+/*ANIMATE ARROWS*/
+/* Arrow Styling */
+.arrow {
+  display: inline-block; /* Ensure the arrow appears inline */
+  margin-left: 0.5rem; /* Add spacing between the text and the arrow */
+  opacity: 1; /* Initially hidden */
+  transform: translateX(-10px); /* Start slightly off-screen for animation */
+  transition: all 2s ease; /* Smooth fade and slide animation */
+}
+
+/* When the arrow becomes visible (triggered by React state) */
+.nav-link .arrow {
+  opacity: 1; /* Fade the arrow in */
+  transform: translateX(0); /* Slide the arrow into place */
+}
+
+/* Active or Hovered Link */
+.nav-link:hover .arrow,
+.nav-link.active .arrow {
+  opacity: 1; /* Always show the arrow when hovered or active */
+  transform: translateX(0); /* Ensure the arrow is in position */
+}

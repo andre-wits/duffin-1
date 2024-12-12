@@ -1,0 +1,68 @@
+/* Footer Styling */
+.footer {
+  background-color: #ffffff; /* Dark background */
+  position: relative; /* Create a relative container for absolutely positioned elements */
+  color: #fff; /* White text */
+  text-align: center; /* Center all content */
+  padding: 2rem 1rem; /* Add padding for spacing */
+  overflow: hidden; /* Prevent background text from spilling outside */
+  margin-top: 7rem;
+}
+
+/* Large Business Name in the Background */
+.footer-business-name {
+  position: absolute; /* Position it relative to the footer */
+  top: 1rem; /* Start at the top of the footer */
+  left: 0; /* Align to the left */
+  font-size: 8rem; /* Very large font size */
+  color: rgba(11, 0, 0, 0.05); /* Light color with low opacity */
+  font-family: 'Italiana', serif; /* Use the business font */
+  pointer-events: none; /* Make sure it doesn't interfere with interactions */
+  white-space: nowrap; /* Prevent text from wrapping */
+  z-index: 0; /* Place it behind other footer elements */
+}
+
+/* Icon Styling */
+.footer-icon {
+  font-size: 2rem; /* Icon size */
+  color: #b0b0b0; /* Wood-like color */
+  margin-bottom: 2rem; /* Space between icon and links */
+}
+
+/* Page Links Styling */
+.footer-links {
+  display: flex;
+  justify-content: center; /* Center the links */
+  gap: 3rem; /* Add spacing between links */
+  margin-bottom: 2.2rem; /* Space between links and the line */
+  text-transform: uppercase;
+  font-weight: 100;
+}
+
+.footer-link {
+  text-decoration: none; /* Remove underline */
+  color: #7b7b7b; /* Light grey text for links */
+  font-size: 1rem;
+  transition: all 0.3s ease; /* Smooth hover effect */
+}
+
+.footer-link:hover {
+  color: #fff; /* Brighten the link color on hover */
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Horizontal Line */
+.footer-line {
+  border: none; /* Remove default border styling */
+  border-top: 1px solid #444; /* Thin grey line */
+  margin: 1rem auto; /* Add spacing above and below the line */
+  width: 70vw;
+}
+
+/* Rights Reserved Message */
+.footer-message {
+  font-size: 0.9rem; /* Smaller text size */
+  color: #aaa; /* Light grey text */
+  font-weight: 100;
+  margin-top: 2.2rem;
+}

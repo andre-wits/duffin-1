@@ -1,0 +1,102 @@
+/* General Styling for the Section */
+.below-navbar {
+  display: flex;
+  width: 100%;
+  height: 60vh; /* Adjust height as needed */
+  margin-top: 1rem; /* Push below the navbar */
+}
+
+/* Left Side (1/3 of the screen) */
+.left-side {
+  flex: 1; /* Takes up 1/3 of the screen */
+  background-color: transparent; /* Whitespace */
+  display: flex;
+  align-items: end;
+  justify-content: start;
+}
+
+.left-side h1 {
+  padding-left: 3rem;
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+/* Right Side (2/3 of the screen) */
+.right-side {
+  flex: 2; /* Takes up 2/3 of the screen */
+  display: flex;
+  justify-content: start; /* Center the black box horizontally */
+  align-items: center; /* Center the black box vertically */
+}
+
+/* Black Box */
+.black-box {
+  background-color: #000; /* Black background */
+  color: #fff; /* White text */
+  width: 61vw; /* Adjust width relative to the container */
+  max-width: 1200px; /* Set a max width for larger screens */
+  height: 83%; /* Adjust height */
+  border-radius: 20px; /* Rounded corners */
+  padding: 2rem; /* Add padding inside the black box */
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  justify-content: space-between; /* Space between the top and bottom sections */
+}
+
+.FaCircle {
+  font-size: 0.6rem;
+  padding-right: 0.5rem;
+}
+
+/* Top Heading */
+.top-heading {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.box-heading1 {
+  font-size: 1rem;
+  font-weight: 100;
+  text-align: left; /* Align heading to the left */
+  margin-bottom: auto; /* Push the heading to the top */
+  color: #bbbaba;
+}
+
+.box-heading2 {
+  font-size: 1rem;
+  font-weight: 100;
+  text-align: center; /* Align heading to the left */
+  margin-bottom: auto; /* Push the heading to the top */
+  color: #bbbaba;
+  padding-left: 15rem;
+}
+
+/* Bottom Section of the Black Box */
+.box-bottom {
+  display: flex;
+  justify-content: space-between; /* Space between the intro text and the icon */
+  align-items: flex-end; /* Align both bottom elements to the bottom */
+}
+
+/* Intro Text */
+.intro-text {
+  width: 30rem;
+}
+
+.intro-text h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.intro-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ddd; /* Lighter color for the intro text */
+}
+
+/* Icon Styling */
+.icon {
+  font-size: 2.5rem;
+  color: #888; /* Grey color for the icon */
+}
