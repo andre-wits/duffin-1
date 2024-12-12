@@ -36,7 +36,8 @@ const SectionTwo = () => {
         <img src={ImageThree} alt="Placeholder" className="box-image" />
         <div className="box-content">
           <span className="box-number">/02</span>
-          <h3 className="box-heading">Box Two</h3>
+          <h3 className="box-heading">Creativity.</h3>
+          <h3 className="box-heading">Functionality.</h3>
           <FaArrowDown className="box-arrow" />
         </div>
         <div className="box-hover">
@@ -49,7 +50,7 @@ const SectionTwo = () => {
         <img src={ImageOne} alt="Placeholder" className="box-image" />
         <div className="box-content">
           <span className="box-number">/03</span>
-          <h3 className="box-heading">Box Three</h3>
+          <h3 className="box-heading">Refined.</h3>
           <FaArrowDown className="box-arrow" />
         </div>
         <div className="box-hover">
