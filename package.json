@@ -2,7 +2,6 @@
   "name": "woodshop-website",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://dre01.github.io/woodshop-website",
   "dependencies": {
     "cra-template": "1.2.0",
     "react": "^19.0.0",
@@ -14,8 +13,6 @@
     "web-vitals": "^4.2.4"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -42,7 +39,6 @@
   "devDependencies": {
     "eslint": "^8.57.1",
     "eslint-plugin-react": "^7.37.2",
-    "gh-pages": "^6.2.0",
     "globals": "^15.13.0",
     "prettier": "^3.4.2"
   }
