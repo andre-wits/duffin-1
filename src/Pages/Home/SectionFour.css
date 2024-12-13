@@ -1,6 +1,6 @@
 /* Two-Column Layout */
 .sectionfour-layout {
-  margin-top: 13rem;
+  margin-top: 6rem;
   display: grid;
   grid-template-columns: 1fr 2fr; /* 1/3 and 2/3 column widths */
   gap: 0.4rem; /* Space between the two columns */
