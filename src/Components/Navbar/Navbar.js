@@ -55,7 +55,7 @@ const Navbar = () => {
             <FaInstagram />
           </a>
           <a
-            href="#"
+            href="https://twitter.com/"
             className="social-link"
             target="_blank"
             rel="noopener noreferrer"

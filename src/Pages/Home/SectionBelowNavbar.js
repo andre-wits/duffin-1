@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaStar, FaCircle, FaCircleNotch } from 'react-icons/fa'; // Example icon (grey star)
+import { FaCircle, FaCircleNotch } from 'react-icons/fa'; // Example icon (grey star)
 import './SectionBelowNavbar.css';
 import Woodshop from '../../assets/images/a_beautiful_woodsh_image.jpg';
 
