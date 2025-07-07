@@ -1,11 +1,10 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Navbar from './Components/Navbar';
-import Footer from './Components/Footer';
+import Navbar from './Components/Navbar/Navbar';
+import Footer from './Components/Footer/Footer';
 import Home from './Pages/Home/Home';
-import Products from './Pages/Products';
-import Contact from './Pages/Contact';
-import About from './Pages/About';
+import Products from './Pages/Products/Products';
+import Contact from './Pages/Contact/Contact';
 
 function App() {
   return (
@@ -15,7 +14,6 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
             <Route path="/products" element={<Products />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>

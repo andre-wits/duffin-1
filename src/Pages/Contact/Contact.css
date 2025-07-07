@@ -1,0 +1,250 @@
+/*Contact Page CSS*/
+
+:root {
+  --highlight-green: #93e14f;
+}
+
+.contact-main {
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+.contact-headings {
+  margin-bottom: 1.5rem;
+}
+.contact-heading {
+  font-size: 4.5rem;
+  font-weight: 500;
+  margin: 0;
+  color: #222;
+}
+.contact-subheading {
+  font-size: 1.7rem;
+  font-weight: 400;
+  margin: 0.5rem 0 0 0;
+  color: #4b4b4b;
+}
+.divider {
+  width: 100%;
+  border: none;
+  border-top: 2px solid #101010;
+  margin: 2.5rem 0 1.5rem 0;
+}
+
+.email-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 2rem;
+  min-height: 200px;
+}
+.email-col {
+  border-radius: 1rem;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.email-heading {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.email-address {
+  font-size: 1.1rem;
+  color: black;
+  background-color: var(--highlight-green);
+  font-family: monospace;
+  text-decoration: none;
+  padding: 2px 3px;
+}
+
+.main-row {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 10rem;
+  align-items: start;
+  margin-top: 5rem;
+}
+.desc-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.desc-heading {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #222;
+}
+.desc-subheading {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 0.7rem;
+  color: #666;
+}
+.desc-text {
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.form-col {
+  background: #fafafa;
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  padding: 2rem 1.5rem;
+  max-width: 500px;
+  width: 100%;
+}
+.form-heading {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1.3rem;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+.contact-field,
+.contact-select,
+.contact-textarea {
+  width: 94%;
+  padding: 0.7rem 1rem;
+  border: 1.5px solid #bbb;
+  border-radius: 0.7rem;
+  font-size: 0.9rem;
+  background: #fff;
+  transition: border-color 0.2s;
+}
+.contact-field:focus,
+.contact-select:focus,
+.contact-textarea:focus {
+  border-color: #8b4513;
+  outline: none;
+}
+.contact-label {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 0.6rem;
+  margin-bottom: -0.5rem;
+}
+.contact-checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.contact-checkbox {
+  width: 1.1rem;
+  height: 1.1rem;
+  accent-color: #8b4513;
+}
+.send-btn {
+  margin-top: 0.7rem;
+  background: var(--highlight-green);
+  color: #fff;
+  border: none;
+  border-radius: 0.7rem;
+  padding: 0.9rem 1.2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  opacity: 1;
+  transition:
+    background 0.18s,
+    opacity 0.2s;
+}
+.send-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+/* Responsive styles */
+@media (max-width: 900px) {
+  .email-grid {
+    grid-template-columns: 1fr;
+    min-height: unset;
+    gap: 1rem;
+  }
+  .main-row {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .form-col {
+    max-width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  .contact-heading {
+    font-size: 1.6rem;
+  }
+  .contact-subheading {
+    font-size: 1.15rem;
+  }
+  .form-col {
+    padding: 1.1rem 0.5rem;
+  }
+}
+
+.contact-info-box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  background: #f1f1f1;
+  border: 1px solid #e7e7e7;
+  border-radius: 1.3rem;
+  box-shadow: 0 1px 12px rgba(0, 0, 0, 0.08);
+  padding: 2.5rem 2rem;
+  margin-top: 2.5rem;
+  margin-bottom: 3rem;
+}
+.info-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.info-heading {
+  background: var(--highlight-green);
+  padding: 2px 2px;
+  color: #000000;
+  font-size: 1.18rem;
+  font-weight: 700;
+  margin-bottom: 0.1rem;
+  display: inline-block;
+  letter-spacing: 0.03em;
+}
+.info-subheading {
+  font-size: 1rem;
+  color: #4f4f4f;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+.info-content {
+  color: #5f5f5f;
+  font-size: 0.99rem;
+  line-height: 1.6;
+  white-space: pre-line;
+  word-break: break-word;
+}
+
+.info-content-bank-details {
+  color: #000;
+  font-weight: 700;
+}
+
+.span-highlight {
+  background: var(--highlight-green);
+}
+
+@media (max-width: 900px) {
+  .contact-info-box {
+    grid-template-columns: 1fr;
+    gap: 1.8rem;
+    padding: 1.3rem 0.7rem;
+  }
+  .info-heading {
+    font-size: 1.07rem;
+  }
+}

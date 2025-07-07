@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaStar, FaCircle, FaCircleNotch } from 'react-icons/fa'; // Example icon (grey star)
 import './SectionBelowNavbar.css';
-import Villa from '../../assets/images/Villa.jpg';
+import Woodshop from '../../assets/images/a_beautiful_woodsh_image.jpg';
 
 const SectionBelowNavbar = () => {
   return (
@@ -13,7 +13,10 @@ const SectionBelowNavbar = () => {
 
       {/* Right Side (2/3 of the screen) */}
       <div className="right-side">
-        <div className="black-box" style={{ backgroundImage: `url(${Villa})` }}>
+        <div
+          className="black-box"
+          style={{ backgroundImage: `url(${Woodshop})` }}
+        >
           {/* Top Heading */}
           <div className="top-heading">
             <h1 className="box-heading1">
