@@ -1,11 +1,7 @@
 import React from 'react';
 import './SectionThree.css';
-import { FaCircleNotch } from 'react-icons/fa';
 import Image1 from '../../assets/images/furniture/1.jpg';
-import Image2 from '../../assets/images/furniture/2.jpg';
 import Image3 from '../../assets/images/furniture/3.jpg';
-import Image4 from '../../assets/images/furniture/4.jpg';
-import Image5 from '../../assets/images/furniture/5.jpg';
 import Image6 from '../../assets/images/furniture/6.jpg';
 import Image7 from '../../assets/images/furniture/7.jpg';
 import Image8 from '../../assets/images/furniture/8.jpg';

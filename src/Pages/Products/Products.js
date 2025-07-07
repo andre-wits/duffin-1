@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 import './Products.css';
-import { FaStar, FaCircle, FaCircleNotch } from 'react-icons/fa'; // Example icon (grey star)
-import Villa from '../../assets/images/Villa.jpg';
+import { FaCircleNotch } from 'react-icons/fa'; // Example icon (grey star)
 import BannerImage from '../../assets/images/products/a_chest_of_drawers_image.jpeg';
 import bed1 from '../../assets/images/products/images/bunks/large/bunk_curved_panel1.jpg';
-import cot1 from '../../assets/images/products/images/cots/cot.jpg';
 
 // --- Replace with your actual images and product data ---
 const galleryImages = [
