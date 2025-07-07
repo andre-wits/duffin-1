@@ -33,6 +33,14 @@ const Navbar = () => {
           >
             Contact
           </NavLink>
+          <NavLink
+            to="/contact"
+            className={({ isActive }) =>
+              isActive ? 'nav-link active' : 'nav-link'
+            }
+          >
+            Our Shop
+          </NavLink>
         </div>
         <div className="navbar-logo">
           <span className="logo-text">— DuffinWoodworks —</span>

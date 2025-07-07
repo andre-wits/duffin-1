@@ -1,6 +1,6 @@
 /* Footer Styling */
 .footer {
-  background-color: #ffffff; /* Dark background */
+  background: #fafafa;
   position: relative; /* Create a relative container for absolutely positioned elements */
   color: #fff; /* White text */
   text-align: center; /* Center all content */
