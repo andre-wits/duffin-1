@@ -39,7 +39,7 @@ const Navbar = () => {
         </div>
         <div className="navbar-right">
           <a
-            href="#"
+            href="https://www.facebook.com/CotsandBunks"
             className="social-link"
             target="_blank"
             rel="noopener noreferrer"
@@ -47,7 +47,7 @@ const Navbar = () => {
             <FaFacebook />
           </a>
           <a
-            href="#"
+            href="https://www.instagram.com/cotsandbunks_sa/"
             className="social-link"
             target="_blank"
             rel="noopener noreferrer"
