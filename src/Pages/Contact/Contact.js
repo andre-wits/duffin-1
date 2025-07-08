@@ -4,7 +4,7 @@ import './Contact.css';
 const emailGrid = [
   {
     heading: 'Email us your questions directly.',
-    email: 'support@placeholder.com',
+    email: 'bunkzonekzn@gmail.com/cotzonekzn@gmail.com',
   },
   {
     heading: 'Whatsapp us directly.',
@@ -66,7 +66,7 @@ const ContactMainSection = () => {
         {/* Left Column */}
         <div className="desc-col">
           <h3 className="desc-heading">
-            We'll email you back to discuss your plan .
+            We'll email you back to discuss your wood.
           </h3>
           <div className="desc-subheading">
             We are here to help you and we'd love to connect with you.

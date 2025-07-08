@@ -1,4 +1,10 @@
 /* Footer Styling */
+
+:root {
+  --highlight-link: #d4bf01;
+  --highlight-lighter: #363636;
+}
+
 .footer {
   background: #fafafa;
   position: relative; /* Create a relative container for absolutely positioned elements */
@@ -25,7 +31,7 @@
 /* Icon Styling */
 .footer-icon {
   font-size: 2rem; /* Icon size */
-  color: #808080; /* Wood-like color */
+  color: #474747; /* Wood-like color */
   margin-bottom: 2rem; /* Space between icon and links */
 }
 
@@ -35,7 +41,6 @@
   justify-content: center; /* Center the links */
   gap: 3rem; /* Add spacing between links */
   margin-bottom: 2.2rem; /* Space between links and the line */
-  text-transform: uppercase;
   font-weight: 100;
 }
 
@@ -59,7 +64,7 @@
 }
 
 .footer-link:hover {
-  color: #000; /* Brighten the link color on hover */
+  color: var(--highlight-link); /* Brighten the link color on hover */
 }
 
 .footer-link:hover::after {

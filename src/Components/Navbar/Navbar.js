@@ -7,6 +7,9 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-container">
+        <div className="navbar-logo">
+          <span className="logo-text">DuffinWoodworks</span>
+        </div>
         <div className="navbar-left">
           <NavLink
             to="/"
@@ -34,16 +37,13 @@ const Navbar = () => {
             Contact
           </NavLink>
           <NavLink
-            to="/contact"
+            to="/ourshop"
             className={({ isActive }) =>
               isActive ? 'nav-link active' : 'nav-link'
             }
           >
             Our Shop
           </NavLink>
-        </div>
-        <div className="navbar-logo">
-          <span className="logo-text">— DuffinWoodworks —</span>
         </div>
         <div className="navbar-right">
           <a

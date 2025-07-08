@@ -3,8 +3,8 @@ import './Products.css';
 import { FaCircleNotch } from 'react-icons/fa'; // Example icon (grey star)
 import BannerImage from '../../assets/images/products/a_chest_of_drawers_image.jpeg';
 import bed1 from '../../assets/images/products/images/bunks/large/bunk_curved_panel1.jpg';
+import cot from '../../assets/images/products/images/cots/cot.jpg';
 
-// --- Replace with your actual images and product data ---
 const galleryImages = [
   {
     src: bed1,
@@ -87,15 +87,13 @@ const productSections = [
   },
   {
     title: 'Cots & Cribs.',
-    type: 'gallery',
-    gallery: galleryImages,
-    afterGallery: (
+    type: 'text',
+    heading:
+      'Our range of cots is made from local "A" grade MDF (Supawood) and pine. They accommodate an SA 130 x 66cm mattress.',
+    subheading:
+      'Our range of cots is made from local "A" grade MDF (Supawood) and pine. They accommodate an SA 130 x 66cm mattress.',
+    text: (
       <>
-        <div className="product-info-subheading">
-          Our range of cots is made from local 'A' grade MDF (Supawood) and
-          pine. They accommodate an SA 130 x 66cm mattress.
-        </div>
-        <p className="product-info-text"></p>
         <ul className="product-info-list">
           <h6>Features</h6>
           <li>
@@ -127,6 +125,7 @@ const productSections = [
         </ul>
       </>
     ),
+    image: cot,
   },
   {
     title: 'Drawer Chests.',
@@ -177,24 +176,32 @@ const ProductsPage = () => {
   return (
     <div className="products-page">
       {/* Top Title Section */}
-      <section className="below-navbar">
+      <section className="below-navbar-product-page">
         {/* Left Side (1/3 of the screen) */}
-        <div className="left-side">
-          <h1 className="home-left-side-heading">Products</h1>
+        <div className="left-side-product-page">
+          <h1 className="home-left-side-heading-product-page">
+            <mark>Products</mark>
+          </h1>
+          <p>
+            We’re a small, dedicated team, led by friends Daniel and Bongani.
+            With years of experience in carpentry, joinery, forestry, and
+            sawmilling, we bring a wealth of skill and care to every item we
+            make.
+          </p>
         </div>
 
         {/* Right Side (2/3 of the screen) */}
-        <div className="right-side">
+        <div className="right-side-product-page">
           <div
-            className="black-box"
+            className="black-box-product-page"
             style={{ backgroundImage: `url(${BannerImage})` }}
           >
             {/* Top Heading */}
-            <div className="top-heading"></div>
+            <div className="top-heading-product-page"></div>
 
             {/* Bottom Left Intro Section */}
-            <div className="box-bottom">
-              <div className="intro-text">
+            <div className="box-bottom-product-page">
+              <div className="intro-text-product-page">
                 <h2>Craftsmanship at Its Best</h2>
                 <p>
                   Discover the beauty of handcrafted woodwork. Each piece is a
@@ -203,8 +210,8 @@ const ProductsPage = () => {
               </div>
 
               {/* Bottom Right Icon */}
-              <div className="icon">
-                <FaCircleNotch size={35} color="#bbbaba" />
+              <div className="icon-product-page">
+                <FaCircleNotch size={35} />
               </div>
             </div>
           </div>
@@ -218,7 +225,9 @@ const ProductsPage = () => {
             <div className="product-row">
               {/* Left: Category Title */}
               <div className="product-col product-col-title">
-                <h2>{section.title}</h2>
+                <h2>
+                  <mark>{section.title}</mark>
+                </h2>
               </div>
               {/* Right: Content */}
               <div className="product-col product-col-content">
@@ -310,7 +319,9 @@ const ProductsPage = () => {
         aria-label="Product Options and Info"
       >
         <div className="info-box">
-          <div className="info-box-title">Trundle Units</div>
+          <div className="info-box-title">
+            <mark>Trundle Units</mark>
+          </div>
           <div className="info-box-desc">
             Our cots, bunks, and single beds offer under-bed trundle units—open
             drawers on castors, finished to match, for smart storage that looks
@@ -318,7 +329,9 @@ const ProductsPage = () => {
           </div>
         </div>
         <div className="info-box">
-          <div className="info-box-title">Painting & Colours</div>
+          <div className="info-box-title">
+            <mark>Painting & Colours</mark>
+          </div>
           <div className="info-box-desc">
             Every piece is spray painted with two primer coats and a satin top
             coat. Custom colours (Candy, Slate, Powder, Ink, Cloud) add R400 and
@@ -326,14 +339,18 @@ const ProductsPage = () => {
           </div>
         </div>
         <div className="info-box">
-          <div className="info-box-title">Stock Levels</div>
+          <div className="info-box-title">
+            <mark>Stock Levels</mark>
+          </div>
           <div className="info-box-desc">
             We keep most items in stock, but availability varies. Please contact
             us for current options.
           </div>
         </div>
         <div className="info-box">
-          <div className="info-box-title">Guarantee</div>
+          <div className="info-box-title">
+            <mark>Guarantee</mark>
+          </div>
           <div className="info-box-desc">
             All products include a two-year guarantee on materials and
             workmanship. (Normal wear and tear and bite marks not covered!)

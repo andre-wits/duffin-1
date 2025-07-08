@@ -1,0 +1,334 @@
+:root {
+  --highlight-shop: #feff88;
+}
+
+.shop-root {
+  background: #fafafa;
+  color: #1a2c12;
+}
+
+/* --- Banner Section --- */
+.shop-banner-section {
+  width: 92%;
+  margin: 2.5rem auto 0 auto;
+  position: relative;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.11);
+  min-height: 340px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background: #e7ede6;
+}
+.shop-banner-img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.8) grayscale(10%);
+}
+.shop-banner-box {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: rgb(255, 255, 255);
+  border-radius: 1.5rem;
+  padding: 1.7rem 1.2rem;
+  margin: 0 0 1rem 1rem;
+  max-width: 500px;
+  min-width: 300px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.shop-banner-heading {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #000000;
+  margin-bottom: 0.6rem;
+  letter-spacing: 0.02em;
+  display: inline-block;
+}
+.shop-banner-subheading {
+  font-size: 1.18rem;
+  font-weight: 600;
+  color: #3c3c3c;
+  margin-bottom: 0.5rem;
+}
+.shop-banner-text {
+  font-size: 1rem;
+  color: #000000;
+  margin-bottom: 1.1rem;
+}
+.shop-banner-btn {
+  background: #000000;
+  color: #ffffff;
+  border: 1px solid #fff;
+  border-radius: 0.3rem;
+  padding: 0.8rem 2rem;
+  font-size: 0.8rem;
+  font-weight: 100;
+  cursor: pointer;
+  transition: background 0.16s;
+}
+.shop-banner-btn:hover {
+  background: #7cc32f;
+}
+
+/* --- Centered Large Text --- */
+.shop-centertext-section {
+  width: 80%;
+  margin: 5rem auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.shop-centertext-section h1 {
+  font-size: 3rem;
+  margin-bottom: 1.4rem;
+  letter-spacing: 0.01em;
+}
+.shop-centertext {
+  font-size: 1.7rem;
+  width: 80%;
+  margin: 0 auto;
+  font-weight: 400;
+  color: #4b4b4b;
+  background: none;
+  padding: 0.25em 0.85em;
+  text-align: center;
+  display: inline-block;
+  letter-spacing: 0.01em;
+  line-height: 2.1rem;
+}
+
+.shop-span-highlight {
+  color: #000;
+  font-weight: 600;
+}
+
+/* --- Gallery Info Section --- */
+.shop-galleryinfo-section {
+  max-width: 1400px;
+  margin: 10rem auto 3.3rem auto;
+  width: 92%;
+}
+.shop-galleryinfo-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0rem;
+  flex-wrap: wrap;
+}
+.shop-galleryinfo-left {
+  flex: 1 1 300px;
+  min-width: 210px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.shop-galleryinfo-heading {
+  font-size: 2.1rem;
+  font-weight: 400;
+  color: #153c10;
+  border-radius: 0.7rem;
+  padding: 0.1em 0.6em;
+  margin-top: 0.8rem;
+}
+mark.shop-galleryinfo-heading {
+  background: var(--highlight-shop);
+}
+.shop-galleryinfo-right {
+  flex: 4 1 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1.15rem;
+}
+.shop-galleryinfo-top {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.2rem;
+  margin-bottom: 0.7rem;
+  flex-wrap: wrap;
+}
+.shop-galleryinfo-btn {
+  background: #2a2a2a;
+  color: #f2f2f2;
+  border: none;
+  border-radius: 0.7rem;
+  padding: 0.7rem 1.7rem;
+  font-size: 0.8rem;
+  font-weight: 300;
+  cursor: pointer;
+  margin-bottom: 0.3rem;
+  border: 1px solid #fafafa;
+  transition:
+    background 0.16s,
+    color 0.16s;
+}
+.shop-galleryinfo-btn:hover {
+  background: var(--highlight-shop);
+  color: #000;
+  border: 1px solid #000;
+}
+.shop-galleryinfo-text {
+  font-size: 1.07rem;
+  color: #263317;
+  max-width: 330px;
+}
+
+/* Gallery grid of varying sizes */
+.shop-gallery-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+.shop-gallery-item {
+  border-radius: 0.9rem;
+  overflow: hidden;
+  background: #eaeaea;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07);
+  aspect-ratio: 2 / 3;
+}
+.shop-gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+/* Vary gallery item sizes for visual interest */
+.shop-gallery-item-0 {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+.shop-gallery-item-1 {
+  grid-column: span 1;
+}
+.shop-gallery-item-2 {
+  grid-row: span 2;
+}
+.shop-gallery-item-3 {
+}
+.shop-gallery-item-4 {
+}
+
+/* --- Info Section(s) --- */
+.shop-info-section {
+  max-width: 1500px;
+  width: 92%;
+  margin: 2.7rem auto 0.5rem auto;
+  padding: 0 1rem;
+}
+.shop-info-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 2.2rem;
+  flex-wrap: wrap;
+}
+.shop-info-left {
+  flex: 1 1 220px;
+  min-width: 190px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.shop-info-heading {
+  font-size: 2rem;
+  font-weight: 400;
+  color: #000000;
+  border-radius: 0.7rem;
+  padding: 0.1em 0.55em;
+  margin-top: 0.7rem;
+  display: inline-block;
+}
+.shop-info-right {
+  flex: 4 1 600px;
+  display: flex;
+  align-items: flex-start;
+}
+.shop-info-box {
+  background: #fff;
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  padding: 2.5rem 1.7rem;
+  font-size: 1.2rem;
+  color: #757575;
+  margin-left: 0.1rem;
+  line-height: 2rem;
+}
+
+.shop-small-headings {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 0.3rem;
+  display: block;
+}
+.shop-small-headings:nth-child(2) {
+  margin-top: 1rem;
+}
+
+/* --- Responsive Styles --- */
+@media (max-width: 1100px) {
+  .shop-banner-section {
+    min-height: 240px;
+  }
+  .shop-galleryinfo-row,
+  .shop-info-row {
+    flex-direction: column;
+    gap: 1.1rem;
+  }
+  .shop-gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 800px) {
+  .shop-banner-section {
+    width: 98vw;
+    margin: 1.2rem auto 0 auto;
+  }
+  .shop-banner-img {
+    height: 200px;
+  }
+  .shop-banner-box {
+    padding: 1.2rem 1.1rem 1rem 1rem;
+    max-width: 98vw;
+  }
+  .shop-centertext {
+    font-size: 1.2rem;
+  }
+  .shop-galleryinfo-heading {
+    font-size: 1.3rem;
+  }
+  .shop-info-heading {
+    font-size: 1.11rem;
+  }
+  .shop-gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .shop-banner-section {
+    min-height: 120px;
+  }
+  .shop-banner-img {
+    height: 120px;
+  }
+  .shop-banner-box {
+    font-size: 0.96rem;
+    border-radius: 0 0 1rem 0;
+  }
+  .shop-centertext {
+    padding: 0.12em 0.2em;
+  }
+  .shop-gallery-grid {
+    grid-template-columns: 1fr;
+  }
+  .shop-info-box {
+    padding: 1rem 0.8rem;
+  }
+}

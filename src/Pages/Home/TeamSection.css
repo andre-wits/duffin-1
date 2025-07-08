@@ -1,17 +1,25 @@
 /* Team Section Styling */
+
+:root {
+  --highlight: #feff88;
+}
+
 .team-section {
-  padding: 2rem;
   text-align: center;
-  width: 90vw;
-  margin: 0 auto;
+  width: 88%;
+  margin: 1rem auto;
 }
 
 .team-header {
   font-size: 2rem; /* Adjust header size */
   font-weight: 300;
   color: #000000; /* Darker text color */
-  margin-top: 5rem; /* Remove default margin */
-  padding-left: 3rem;
+  margin-top: 6rem; /* Remove default margin */
+  padding-left: 4.5rem;
+}
+
+mark {
+  background-color: var(--highlight);
 }
 
 /* Team Grid Layout */

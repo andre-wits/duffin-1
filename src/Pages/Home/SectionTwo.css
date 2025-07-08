@@ -1,11 +1,23 @@
 /* Section Styling */
+
+:root {
+  --highlight: #feff88;
+}
+
+.boxes-heading {
+  margin-top: 9rem;
+  padding-left: 4.5rem;
+  font-size: 2rem;
+  font-weight: 300;
+}
+
 .three-boxes {
   display: flex;
   justify-content: space-between; /* Space between the boxes */
   align-items: center;
-  width: 100%;
-  padding: 5rem; /* Add padding on the sides */
+  width: 88%;
   gap: 2rem; /* Space between the boxes */
+  margin: 2rem auto; /* Center the boxes and add vertical spacing */
   box-sizing: border-box; /* Include padding in width calculations */
 }
 
@@ -16,7 +28,7 @@
   max-width: calc(
     33.33% - 2rem
   ); /* Ensure 3 boxes fit the screen with spacing */
-  height: 580px; /* Fixed height for the boxes */
+  height: 500px; /* Fixed height for the boxes */
   border-radius: 60px; /* Rounded corners */
   overflow: hidden; /* Ensure content doesn't spill outside */
   cursor: pointer; /* Indicate interactivity */
@@ -53,11 +65,11 @@
   flex-direction: column;
   justify-content: flex-start; /* Align items at the top */
   z-index: 1; /* Ensure content is above the image */
-  background: rgb(45, 45, 45);
+  background: rgba(45, 45, 45, 0.259);
   background: linear-gradient(
     145deg,
-    rgb(0, 0, 0) 0%,
-    rgba(0, 0, 0, 0.364) 11%,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0) 11%,
     rgba(0, 0, 0, 0) 100%
   );
 }
@@ -84,6 +96,10 @@
     opacity 0.3s ease; /* Smooth animation for movement and fade-out */
 }
 
+mark {
+  background: var(--highlight);
+}
+
 /* Arrow Styling */
 .box-arrow {
   font-size: 1.1rem;
@@ -94,7 +110,8 @@
 }
 
 .box:hover .box-arrow {
-  transform: translateY(5px); /* Arrow moves slightly downward on hover */
+  transform: translateY(10px); /* Arrow moves slightly downward on hover */
+  transform: rotate(-35deg);
   color: #fff;
 }
 
@@ -105,7 +122,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0); /* Semi-transparent dark overlay */
+  background-color: rgba(0, 0, 0, 0.637); /* Semi-transparent dark overlay */
   color: #fff;
   display: flex;
   justify-content: center;
@@ -118,8 +135,9 @@
 }
 
 .box-hover p {
-  width: 70%;
-  font-size: 1.3rem;
+  width: 80%;
+  font-size: 1rem;
+  line-height: 1.3rem;
   color: #fff;
 }
 
@@ -129,6 +147,6 @@
 
 /* Heading Animation on Hover */
 .box:hover .box-heading {
-  transform: translateX(60%); /* Move the heading to the left */
-  opacity: 0.5; /* Fade out the heading */
+  transform: translateX(40%); /* Move the heading to the left */
+  opacity: 0.1; /* Fade out the heading */
 }

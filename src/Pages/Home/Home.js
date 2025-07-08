@@ -9,10 +9,10 @@ const Home = () => {
   return (
     <section className="home">
       <SectionBelowNavbar />
-      <SectionTwo />
-      <SectionThree />
-      <SectionFour />
       <TeamSection />
+      <SectionTwo />
+      {/* <SectionThree /> */}
+      <SectionFour />
     </section>
   );
 };

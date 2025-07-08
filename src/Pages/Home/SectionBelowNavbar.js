@@ -1,4 +1,3 @@
-import React from 'react';
 import { FaCircle, FaCircleNotch } from 'react-icons/fa'; // Example icon (grey star)
 import './SectionBelowNavbar.css';
 import Woodshop from '../../assets/images/a_beautiful_woodsh_image.jpg';
@@ -8,7 +7,15 @@ const SectionBelowNavbar = () => {
     <section className="below-navbar">
       {/* Left Side (1/3 of the screen) */}
       <div className="left-side">
-        <h1 className="home-left-side-heading">Custom Woodshop</h1>
+        <h1 className="home-left-side-heading">
+          <mark>
+            Handcrafted Woodwork from the Foothills of the Drakensberg
+          </mark>
+        </h1>
+        <p>
+          Beautifully made bunks, beds, cots, and storage—crafted with care,
+          tradition, and local pride.
+        </p>
       </div>
 
       {/* Right Side (2/3 of the screen) */}
@@ -21,9 +28,8 @@ const SectionBelowNavbar = () => {
           <div className="top-heading">
             <h1 className="box-heading1">
               <FaCircle className="FaCircle" />
-              Welcome to Our Woodshop
+              Welcome to our Woodshop
             </h1>
-            <h1 className="box-heading2">We are design & tech</h1>
           </div>
 
           {/* Bottom Left Intro Section */}

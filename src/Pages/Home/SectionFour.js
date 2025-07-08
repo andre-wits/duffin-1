@@ -1,12 +1,15 @@
 import React from 'react';
 import './SectionFour.css';
+import { NavLink } from 'react-router-dom';
 
 const SectionFour = () => {
   return (
     <section className="sectionfour-layout">
       {/* First Column */}
       <div className="sectionfour-column-1">
-        <h1 className="sectionfour-header">How We Work</h1>
+        <h1 className="sectionfour-header">
+          <mark>How We Work</mark>
+        </h1>
       </div>
 
       {/* Second Column */}
@@ -27,11 +30,13 @@ const SectionFour = () => {
           <div class="sectionfour-grid-item">
             <h2 class="sectionfour-grid-header">/02.</h2>
             <h3 class="sectionfour-grid-subheading">
-              Request a Quote or Customize Your Order
+              Whatsapp, Email, or Let Us Call You
             </h3>
             <p class="sectionfour-grid-paragraph">
-              For custom orders, use our Request a Quote form to share your
-              design ideas, dimensions, and any specific requirements.
+              Share your design ideas, dimensions, quantities, and any specific
+              requirements you're thinking about. Email, Whatsapp, call, or use
+              our Request a Quote form, <NavLink to="/contact">here</NavLink>,
+              to
             </p>
           </div>
 
@@ -39,10 +44,10 @@ const SectionFour = () => {
             <h2 class="sectionfour-grid-header">/03.</h2>
             <h3 class="sectionfour-grid-subheading">Confirm Your Order</h3>
             <p class="sectionfour-grid-paragraph">
-              Once you’ve selected your product or approved the custom design
-              and quote, confirm your order by completing the checkout process
-              or making a deposit (if applicable). We’ll send you an order
-              confirmation and estimated completion timeline.
+              Once you’ve approved the design, quantity and quote, confirm your
+              order by making a deposit payment. We’ll send you an order
+              confirmation. Banking details can be found{' '}
+              <NavLink to="/contact">here</NavLink>.
             </p>
           </div>
 
@@ -52,8 +57,8 @@ const SectionFour = () => {
               Receive Your Masterpiece
             </h3>
             <p class="sectionfour-grid-paragraph">
-              When your order is ready, we’ll notify you and arrange for
-              shipping or pickup. If it’s a custom piece, we’ll share photos for
+              We will provide updates and when your order is ready, we’ll notify
+              you and arrange for shipping or pickup. We can share photos for
               your approval before final delivery. Enjoy your handcrafted
               woodworking masterpiece!
             </p>

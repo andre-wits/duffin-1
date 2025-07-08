@@ -1,15 +1,16 @@
 /*Contact Page CSS*/
 
 :root {
-  --highlight-green: #93e14f;
+  --highlight-contact: #feff88;
+  --highlight: #d1faad;
 }
 
 .contact-main {
   padding: 2rem 1rem;
   max-width: 1200px;
   margin: 0 auto;
-  font-family: 'Segoe UI', Arial, sans-serif;
 }
+
 .contact-headings {
   margin-bottom: 1.5rem;
 }
@@ -55,7 +56,7 @@
 .email-address {
   font-size: 1.1rem;
   color: black;
-  background-color: var(--highlight-green);
+  background-color: var(--highlight-contact);
   font-family: monospace;
   text-decoration: none;
   padding: 2px 3px;
@@ -112,7 +113,6 @@
 .contact-field,
 .contact-select,
 .contact-textarea {
-  width: 94%;
   padding: 0.7rem 1rem;
   border: 1.5px solid #bbb;
   border-radius: 0.7rem;
@@ -144,8 +144,8 @@
 }
 .send-btn {
   margin-top: 0.7rem;
-  background: var(--highlight-green);
-  color: #fff;
+  background: var(--highlight-contact);
+  color: #010101;
   border: none;
   border-radius: 0.7rem;
   padding: 0.9rem 1.2rem;
@@ -206,7 +206,7 @@
   align-items: flex-start;
 }
 .info-heading {
-  background: var(--highlight-green);
+  background: var(--highlight-contact);
   padding: 2px 2px;
   color: #000000;
   font-size: 1.18rem;
@@ -235,7 +235,7 @@
 }
 
 .span-highlight {
-  background: var(--highlight-green);
+  background: var(--highlight-contact);
 }
 
 @media (max-width: 900px) {

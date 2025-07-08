@@ -7,23 +7,25 @@ const TeamSection = () => {
   const teamMembers = [
     {
       id: 1,
-      name: 'Graham Taglang',
+      name: 'Daniel',
       description:
-        "Graham, the public face of Parkman since 2015, is who you'll generally speak with about your custom furniture. The native Marylander is certainly busy guiding the ship, but he always makes plenty of time for his new family, cycling and the ever-hapless Washington Football Team.",
+        "Daniel, the public face since 2015, is who you'll generally speak with about your wood. Daniel is a UK experienced carpenter and joiner and a long standing member of the local Woodworking Guild.",
       image: Team1,
     },
     {
       id: 2,
-      name: 'Kyle Jordan',
+      name: 'Bongani',
       description:
-        "Kyle started as a woodworker with Parkman shortly after arriving from Iowa in 2018. A prodigious skateboard videographer, he's now our woodshop manager, photographer and unofficial 'glue guy.' He is one of the premier furniture wood-charring technicians in the country.",
+        "Bongani started as a woodworker shortly after in 2018. Bongani has wide experience in forestry, sawmilling and associated skills. He is the unofficial 'glue guy.' He is one of the premier furniture wood-charring technicians in the country.",
       image: Team2,
     },
   ];
 
   return (
     <div>
-      <h2 className="team-header">Meet the Bosses</h2>
+      <h2 className="team-header">
+        <mark>Meet the Team</mark>
+      </h2>
       <section className="team-section">
         <div className="team-grid">
           {teamMembers.map((member, index) => (

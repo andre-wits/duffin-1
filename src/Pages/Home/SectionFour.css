@@ -1,4 +1,9 @@
 /* Two-Column Layout */
+
+:root {
+  --highlight: #feff88;
+}
+
 .sectionfour-layout {
   margin-top: 6rem;
   display: grid;
@@ -18,6 +23,11 @@
   font-weight: 300;
   color: #000000; /* Darker text color */
   margin: 0; /* Remove default margin */
+  padding-left: 4.5rem;
+}
+
+mark {
+  background-color: var(--highlight);
 }
 
 /* Second Column */
@@ -40,7 +50,7 @@
 /* Grid Items */
 .sectionfour-grid-item {
   position: relative; /* For positioning text content */
-  background-color: #ffffff; /* Light grey background for grid items */
+  background-color: #fafafa; /* Light grey background for grid items */
   padding-left: 0.5rem; /* Padding inside each item */
   padding-bottom: 2rem;
   width: 80%;
@@ -53,8 +63,8 @@
 }
 
 .sectionfour-grid-item:hover {
-  transform: translateY(-1px); /* Slight lift on hover */
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.025); /* Stronger shadow on hover */
+  transform: translateY(-10px); /* Slight lift on hover */
+  box-shadow: 0 6px 15px rgba(40, 24, 24, 0.024); /* Stronger shadow on hover */
 }
 
 /* Text Content Inside Grid Items */
