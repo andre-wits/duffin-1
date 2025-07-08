@@ -82,7 +82,7 @@ export default function Shop() {
         <div className="shop-galleryinfo-row">
           <div className="shop-galleryinfo-left">
             <mark className="shop-galleryinfo-heading">
-              <span>Explore Our Workshop</span>
+              <span id="#markerOne">Explore Our Workshop</span>
             </mark>
           </div>
           <div className="shop-galleryinfo-right">

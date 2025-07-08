@@ -44,7 +44,7 @@ const SectionBelowNavbar = () => {
 
             {/* Bottom Right Icon */}
             <div className="icon">
-              <FaCircleNotch size={35} color="#bbbaba" />
+              <FaCircleNotch color="#fafafa" />
             </div>
           </div>
         </div>

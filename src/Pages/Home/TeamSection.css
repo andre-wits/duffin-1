@@ -1,75 +1,146 @@
 /* Team Section Styling */
 
 :root {
-  --highlight: #feff88;
+  --highlight-team: #feff88;
 }
 
 .team-section {
   text-align: center;
-  width: 88%;
+  width: 86vw;
   margin: 1rem auto;
 }
 
 .team-header {
-  font-size: 2rem; /* Adjust header size */
+  font-size: 2rem;
   font-weight: 300;
-  color: #000000; /* Darker text color */
-  margin-top: 6rem; /* Remove default margin */
-  padding-left: 4.5rem;
+  color: #000000;
+  margin-top: 6rem;
+  padding-left: 6rem;
 }
 
-mark {
-  background-color: var(--highlight);
+.team-header mark {
+  background-color: var(--highlight-team);
 }
 
-/* Team Grid Layout */
+/* Team Grid Layout: pairs image with text, repeats for each member */
 .team-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr; /* Four columns */
-  column-gap: 2rem; /* Space between grid items */
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 2rem;
   row-gap: 4rem;
-  align-items: center; /* Vertically align content */
-  justify-content: center; /* Center content horizontally */
-}
-
-/* Image Styling */
-.team-image-container {
-  display: flex;
+  align-items: center;
   justify-content: center;
 }
 
+/* Each member: image | text */
+.team-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
 .team-image {
   width: 350px;
   height: 480px;
-  border-radius: 12px; /* Rounded border */
-  object-fit: cover; /* Ensure image scales properly */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  max-width: 90vw;
+  max-height: 70vw;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease; /* Smooth hover effects */
+    transform 0.3s,
+    box-shadow 0.3s;
 }
-
 .team-image:hover {
-  transform: scale(1.05); /* Slight zoom effect */
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Text Styling */
 .team-text-container {
-  text-align: left; /* Align text to the left */
+  text-align: left;
   width: 90%;
+  max-width: 38rem;
+  margin: 0 auto;
 }
-
 .team-name {
   font-size: 2.3rem;
   font-weight: bold;
   color: #000000;
-  margin: 0 0 0.5rem 0; /* Space below name */
+  margin: 0 0 0.5rem 0;
 }
-
 .team-description {
   font-size: 1rem;
   color: #656565;
-  margin: 0; /* Remove default margin */
-  line-height: 1.5; /* Improve readability */
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* -------------- Responsive Styles -------------- */
+
+/* Tablet: 2 columns (image | text), stacked pairs */
+@media (max-width: 1050px) {
+  .team-header {
+    font-size: 1.3rem;
+    padding-left: 1.2rem;
+    margin-top: 3.2rem;
+    text-align: center;
+  }
+  .team-grid {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1.2rem;
+    row-gap: 2.5rem;
+  }
+  .team-image {
+    width: 230px;
+    height: 320px;
+    max-width: 80vw;
+    max-height: 50vw;
+  }
+  .team-name {
+    font-size: 1.5rem;
+  }
+}
+
+/* Mobile: 1 column (image above text), stacked members */
+@media (max-width: 700px) {
+  .team-section {
+    width: 99vw;
+    padding: 0;
+  }
+  .team-header {
+    font-size: 1.3rem;
+    padding-left: 0.2rem;
+    margin-top: 2rem;
+    margin-bottom: 1.2rem;
+    text-align: center;
+  }
+  .team-grid {
+    grid-template-columns: 1fr;
+    row-gap: 1.2rem;
+    column-gap: 0;
+  }
+  .team-image-container {
+    justify-content: center;
+    margin-bottom: 0.4rem;
+  }
+  .team-image {
+    width: 92vw;
+    height: 48vw;
+    max-width: 360px;
+    max-height: 230px;
+    border-radius: 9px;
+  }
+  .team-text-container {
+    text-align: left;
+    width: 96vw;
+    max-width: 99vw;
+    margin: 0 auto 1.3rem auto;
+  }
+  .team-name {
+    font-size: 1.15rem;
+    margin-bottom: 0.3rem;
+  }
+  .team-description {
+    font-size: 0.93rem;
+    line-height: 1.4;
+  }
 }

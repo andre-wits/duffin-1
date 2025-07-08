@@ -1,80 +1,152 @@
-/* Footer Styling */
-
 :root {
   --highlight-link: #d4bf01;
   --highlight-lighter: #363636;
 }
 
+/* Footer Styling */
 .footer {
   background: #fafafa;
-  position: relative; /* Create a relative container for absolutely positioned elements */
-  color: #fff; /* White text */
-  text-align: center; /* Center all content */
-  padding: 2rem 1rem; /* Add padding for spacing */
-  overflow: hidden; /* Prevent background text from spilling outside */
+  position: relative;
+  color: #232323;
+  text-align: center;
+  padding: 2.5rem 1rem 1.6rem 1rem;
+  overflow: hidden;
   margin-top: 7rem;
+  min-height: 240px;
 }
 
 /* Large Business Name in the Background */
 .footer-business-name {
-  position: absolute; /* Position it relative to the footer */
-  top: 1rem; /* Start at the top of the footer */
-  left: 0; /* Align to the left */
-  font-size: 8rem; /* Very large font size */
-  color: rgba(11, 0, 0, 0.05); /* Light color with low opacity */
-  font-family: 'Italiana', serif; /* Use the business font */
-  pointer-events: none; /* Make sure it doesn't interfere with interactions */
-  white-space: nowrap; /* Prevent text from wrapping */
-  z-index: 0; /* Place it behind other footer elements */
+  position: absolute;
+  top: 1.5rem;
+  left: 0;
+  width: 100%;
+  font-size: 7vw;
+  min-font-size: 2rem;
+  color: rgba(11, 0, 0, 0.05);
+  font-family: 'Italiana', serif;
+  pointer-events: none;
+  white-space: nowrap;
+  z-index: 0;
+  text-align: center;
+  user-select: none;
 }
 
-/* Icon Styling */
 .footer-icon {
-  font-size: 2rem; /* Icon size */
-  color: #474747; /* Wood-like color */
-  margin-bottom: 2rem; /* Space between icon and links */
+  font-size: 2.2rem;
+  color: #474747;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 1;
 }
 
-/* Page Links Styling */
+/* Footer Links */
 .footer-links {
   display: flex;
-  justify-content: center; /* Center the links */
-  gap: 3rem; /* Add spacing between links */
-  margin-bottom: 2.2rem; /* Space between links and the line */
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  margin-bottom: 2.2rem;
   font-weight: 100;
+  position: relative;
+  z-index: 1;
+  flex-wrap: wrap;
 }
 
 .footer-link {
-  position: relative; /* Position the link for pseudo-element positioning */
-  text-decoration: none; /* Remove default underline */
-  color: #7b7b7b; /* Light grey text for links */
-  font-size: 1rem;
-  transition: color 0.9s ease; /* Smooth color transition */
+  position: relative;
+  text-decoration: none;
+  color: #474747;
+  font-size: 1.1rem;
+  padding: 0.18em 0.5em;
+  transition: color 0.3s;
 }
 
 .footer-link::after {
-  content: ''; /* Create a pseudo-element for the underline */
+  content: '';
   position: absolute;
-  bottom: 0; /* Align underline to the bottom of the text */
-  left: 0; /* Start from the left */
-  width: 0; /* Initially hide the underline */
-  height: 1px; /* Thickness of the underline */
-  background-color: #000; /* Underline color */
-  transition: width 0.3s ease; /* Smooth animation for underline width */
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #000;
+  transition: width 0.3s;
 }
 
 .footer-link:hover {
-  color: var(--highlight-link); /* Brighten the link color on hover */
+  color: var(--highlight-link);
 }
 
 .footer-link:hover::after {
-  width: 100%; /* Expand the underline to full width */
+  width: 100%;
+}
+
+/* Horizontal Line */
+.footer-line {
+  width: 90%;
+  border: none;
+  border-top: 1px solid #e0e0e0;
+  margin: 0 auto 0.4rem auto;
+  position: relative;
+  z-index: 1;
 }
 
 /* Rights Reserved Message */
 .footer-message {
-  font-size: 0.9rem; /* Smaller text size */
-  color: #aaa; /* Light grey text */
-  font-weight: 100;
-  margin-top: 2.2rem;
+  font-size: 0.95rem;
+  color: #888;
+  font-weight: 300;
+  margin-top: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Responsive styles */
+@media (max-width: 750px) {
+  .footer {
+    padding: 2rem 0.6rem 1.2rem 0.6rem;
+  }
+  .footer-business-name {
+    font-size: 10vw;
+    top: 1rem;
+  }
+  .footer-links {
+    gap: 1.7rem;
+  }
+  .footer-icon {
+    font-size: 1.6rem;
+    margin-bottom: 1.1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .footer-business-name {
+    font-size: 13vw;
+    top: 0.7rem;
+  }
+  .footer-links {
+    flex-direction: column;
+    gap: 1.1rem;
+    margin-bottom: 1.5rem;
+  }
+  .footer-link {
+    font-size: 1.03rem;
+    padding: 0.35em 0;
+  }
+  .footer-message {
+    font-size: 0.88rem;
+    margin-top: 1.1rem;
+  }
+  .footer {
+    padding: 1.4rem 0.2rem 0.7rem 0.2rem;
+    min-height: 170px;
+  }
+}
+
+/* Prevent background text from overlapping links on the smallest screens */
+@media (max-width: 380px) {
+  .footer-business-name {
+    font-size: 18vw;
+    top: 0.1rem;
+  }
 }

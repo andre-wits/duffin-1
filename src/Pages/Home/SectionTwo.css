@@ -1,152 +1,214 @@
-/* Section Styling */
-
 :root {
-  --highlight: #feff88;
+  --highlight-section2: #feff88;
 }
 
 .boxes-heading {
-  margin-top: 9rem;
-  padding-left: 4.5rem;
-  font-size: 2rem;
+  text-align: start;
+  font-size: 2.3rem;
   font-weight: 300;
+  letter-spacing: 0.01em;
+  margin: 4rem 0 2.5rem 0;
+  padding-left: 6rem;
+}
+.boxes-heading mark {
+  background-color: var(--highlight-section2);
 }
 
+/* Three boxes layout */
 .three-boxes {
   display: flex;
-  justify-content: space-between; /* Space between the boxes */
-  align-items: center;
-  width: 88%;
-  gap: 2rem; /* Space between the boxes */
-  margin: 2rem auto; /* Center the boxes and add vertical spacing */
-  box-sizing: border-box; /* Include padding in width calculations */
+  gap: 2.2rem;
+  width: 86%;
+  margin: 0 auto 2.5rem auto;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  box-sizing: border-box;
 }
 
-/* Individual Box Styling */
+/* Individual box */
 .box {
-  position: relative; /* For positioning hover elements */
-  flex: 1; /* Make all boxes equal width */
-  max-width: calc(
-    33.33% - 2rem
-  ); /* Ensure 3 boxes fit the screen with spacing */
-  height: 500px; /* Fixed height for the boxes */
-  border-radius: 60px; /* Rounded corners */
-  overflow: hidden; /* Ensure content doesn't spill outside */
-  cursor: pointer; /* Indicate interactivity */
-  transition: transform 0.3s ease; /* Add a smooth zoom effect */
-}
-
-.box:hover {
-  transform: scale(1.05); /* Slightly enlarge the box on hover */
-}
-
-/* Box Image */
-.box-image {
-  width: 100%; /* Cover the entire box width */
-  height: 100%; /* Cover the entire box height */
-  object-fit: cover; /* Ensure the image is properly scaled */
-  transition: all 0.3s ease; /* Smooth blur effect */
-}
-
-.box:hover .box-image {
-  filter: blur(3px); /* Blur the image slightly on hover */
-  transform: scale(1.1); /* Slight zoom effect */
-  opacity: 0.8; /* Darken the image slightly */
-}
-
-/* Box Content (Number, Heading, Arrow) */
-.box-content {
-  position: absolute;
-  top: 0;
-  left: 0;
+  background: #fff;
+  border-radius: 1.7rem;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.09);
+  overflow: hidden;
+  min-width: 250px;
   width: 100%;
-  height: 100%;
-  padding: 1.5rem;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* Align items at the top */
-  z-index: 1; /* Ensure content is above the image */
-  background: rgba(45, 45, 45, 0.259);
-  background: linear-gradient(
-    145deg,
-    rgba(0, 0, 0, 0.7) 0%,
-    rgba(0, 0, 0, 0) 11%,
-    rgba(0, 0, 0, 0) 100%
-  );
+  position: relative;
+  transition: box-shadow 0.2s;
+  flex: 1 1 300px;
+}
+.box:hover,
+.box:focus-within {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.13);
+  z-index: 10;
 }
 
-/* Box Number */
+.box-image {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  display: block;
+  min-height: 180px;
+  max-height: 300px;
+  border-top-left-radius: 1.7rem;
+  border-top-right-radius: 1.7rem;
+  transition: filter 0.2s;
+}
+.box:hover .box-image {
+  filter: brightness(0.95) contrast(1.08);
+}
+
+/* Content below image */
+.box-content {
+  padding: 1.2rem 1.8rem 1.2rem 1.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
 .box-number {
-  font-size: 1.3rem;
-  font-weight: bold;
-  color: #fff;
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6); /* Add a subtle shadow for readability */
-  margin-bottom: 0.5rem; /* Space below the number */
-  margin-top: 2rem;
+  font-size: 0.95rem;
+  color: #bdbdbd;
+  font-family: monospace;
+  margin-bottom: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
 }
-
-/* Box Heading */
 .box-heading {
-  font-size: 2rem;
-  font-weight: 800;
-  color: #fff;
-  text-align: left; /* Center the heading */
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6); /* Add a subtle shadow for readability */
-  transition:
-    transform 0.3s ease,
-    opacity 0.3s ease; /* Smooth animation for movement and fade-out */
+  font-size: 1.22rem;
+  font-weight: 500;
+  color: #1a2c12;
+  margin: 0.14rem 0;
+  letter-spacing: 0.01em;
 }
-
-mark {
-  background: var(--highlight);
-}
-
-/* Arrow Styling */
 .box-arrow {
+  color: #222;
   font-size: 1.1rem;
-  color: #fdfdfd;
-  margin: 0 0; /* Center the arrow horizontally */
-  margin-top: 1rem;
-  transition: transform 0.3s ease; /* Smooth animation for the arrow */
+  margin: 0.8rem 0 0 0;
+  opacity: 0.7;
+  animation: bounceDown 1.6s infinite alternate;
+}
+@keyframes bounceDown {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(7px);
+  }
 }
 
-.box:hover .box-arrow {
-  transform: translateY(10px); /* Arrow moves slightly downward on hover */
-  transform: rotate(-35deg);
-  color: #fff;
-}
-
-/* Hover Text Overlay */
+/* Hover reveal */
 .box-hover {
   position: absolute;
-  top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.637); /* Semi-transparent dark overlay */
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: left;
-  padding: 1rem;
-  opacity: 0; /* Initially hidden */
-  pointer-events: none; /* Prevent interference when not visible */
-  transition: opacity 0.3s ease; /* Smooth fade-in effect */
+  right: 0;
+  bottom: 0;
+  background: rgba(250, 250, 250, 0.98);
+  color: #333;
+  padding: 1.2rem 1.6rem 1.2rem 1.6rem;
+  border-bottom-left-radius: 1.7rem;
+  border-bottom-right-radius: 1.7rem;
+  font-size: 1rem;
+  line-height: 1.7;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.26s;
+  z-index: 5;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.09);
+  font-weight: 400;
+}
+.box:hover .box-hover,
+.box:focus-within .box-hover {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .box-hover p {
-  width: 80%;
-  font-size: 1rem;
-  line-height: 1.3rem;
-  color: #fff;
+  margin: 0;
+  font-size: 0.99rem;
+  color: #404040;
 }
 
-.box:hover .box-hover {
-  opacity: 1; /* Show the overlay text on hover */
+/* ----------- Responsive Styles ----------- */
+
+@media (max-width: 1050px) {
+  .boxes-heading {
+    font-size: 1.3rem;
+    margin: 2.2rem 0 1.3rem 0;
+  }
+  .three-boxes {
+    gap: 1.2rem;
+    width: 99vw;
+  }
+  .box {
+    min-width: 195px;
+    max-width: 310px;
+    border-radius: 1.2rem;
+  }
+  .box-image {
+    border-top-left-radius: 1.2rem;
+    border-top-right-radius: 1.2rem;
+    min-height: 110px;
+    max-height: 200px;
+  }
+  .box-content {
+    padding: 0.8rem 1rem 0.9rem 1rem;
+  }
+  .box-hover {
+    font-size: 0.96rem;
+    padding: 0.8rem 1.1rem 0.8rem 1.1rem;
+    border-bottom-left-radius: 1.2rem;
+    border-bottom-right-radius: 1.2rem;
+  }
 }
 
-/* Heading Animation on Hover */
-.box:hover .box-heading {
-  transform: translateX(40%); /* Move the heading to the left */
-  opacity: 0.1; /* Fade out the heading */
+@media (max-width: 700px) {
+  .three-boxes {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    width: 99vw;
+  }
+  .box {
+    width: 95vw;
+    min-width: 0;
+    max-width: 99vw;
+    border-radius: 0.7rem;
+  }
+  .box-image {
+    border-top-left-radius: 0.7rem;
+    border-top-right-radius: 0.7rem;
+    aspect-ratio: 16/9;
+    min-height: 70px;
+    max-height: 150px;
+  }
+  .box-content {
+    padding: 0.7rem 0.5rem 0.7rem 0.5rem;
+  }
+  .box-heading {
+    font-size: 1.05rem;
+  }
+  .box-hover {
+    font-size: 0.91rem;
+    padding: 0.7rem 0.5rem 0.7rem 0.5rem;
+    border-bottom-left-radius: 0.7rem;
+    border-bottom-right-radius: 0.7rem;
+  }
+}
+
+/* Make sure the hover reveal is always readable and never overflows */
+@media (max-width: 400px) {
+  .boxes-heading {
+    font-size: 0.98rem;
+    margin: 1.2rem 0 0.5rem 0;
+  }
+  .box-content,
+  .box-hover {
+    font-size: 0.87rem;
+    padding: 0.5rem 0.2rem;
+  }
 }

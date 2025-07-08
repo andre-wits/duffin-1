@@ -10,26 +10,14 @@
   --highlight-lighter: #363636;
 }
 
-@font-face {
-  font-family: 'Italiana';
-  src: url('../../assets/fonts/Italiana.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-}
-
 /* Navbar Styling */
 .navbar {
   position: sticky;
   top: 0;
-  left: 0;
   width: 100%;
-  display: flex;
   background-color: #fafafa;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  justify-content: center;
-  align-items: center;
-  padding: 1rem 0;
   z-index: 1000;
 }
 
@@ -39,16 +27,49 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  min-height: 64px;
 }
 
-/* Left Section (Links) - inline */
+/* Logo Section */
+.navbar-logo {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  padding-left: 2rem;
+}
+
+.logo-text {
+  font-size: 1.8rem;
+  font-family: 'Italiana';
+  color: inherit;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Hamburger Menu */
+.navbar-hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  margin-right: 1.2rem;
+  color: #444;
+  cursor: pointer;
+  z-index: 1101;
+}
+
+/* Left Section (Links) */
 .navbar-left {
   display: flex;
-  flex-direction: row; /* horizontal */
-  flex: 1 1;
+  flex-direction: row;
   gap: 4rem;
+  flex: 1 1;
+  justify-content: center;
+  align-items: center;
+  transition: right 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Nav Links */
 .nav-link {
   text-decoration: none;
   color: #838383;
@@ -62,68 +83,125 @@
   border: none;
   background: none;
   cursor: pointer;
-  position: relative;
-  overflow: hidden; /* Ensures underline stays within link bounds */
+  overflow: hidden;
 }
-
-/* Underline effect */
 .nav-link::after {
   content: '';
   position: absolute;
   left: 0;
-  bottom: 0px; /* Just beneath the text */
+  bottom: 0px;
   width: 100%;
   height: 1px;
-  background: #888888; /* Red underline */
+  background: #888888;
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   opacity: 0.8;
   pointer-events: none;
 }
-
 .nav-link:hover,
 .nav-link.active {
   color: var(--highlight-link);
-  font-weight: 400; /* Slightly bolder on hover */
+  font-weight: 400;
 }
-
 .nav-link:hover::after,
 .nav-link.active::after {
   transform: scaleX(1);
 }
 
-/* Logo Section */
-.navbar-logo {
-  flex: 0.5 0 auto;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding-left: 2rem;
-}
-
-.logo-text {
-  font-size: 1.8rem;
-  font-family: 'Italiana';
-  color: inherit;
-  pointer-events: none;
-  user-select: none;
-}
-
-/* Right Section (Social Media Icons) - inline */
+/* Right Section (Social Media Icons) */
 .navbar-right {
   display: flex;
-  flex-direction: row; /* horizontal */
+  flex-direction: row;
   gap: 1.3rem;
   padding-right: 2rem;
 }
-
 .social-link {
   color: #444;
   font-size: 1.5rem;
   transition: all 0.3s ease;
 }
-
 .social-link:hover {
   color: var(--highlight-link);
+}
+
+/* --- Responsive Styles --- */
+@media (max-width: 950px) {
+  .navbar-left {
+    gap: 2.2rem;
+  }
+  .logo-text {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 750px) {
+  .navbar-container {
+    min-height: 56px;
+  }
+  .logo-text {
+    font-size: 1.1rem;
+  }
+  .navbar-logo {
+    padding-left: 1rem;
+  }
+  .navbar-right {
+    padding-right: 0.7rem;
+  }
+}
+
+/* Mobile Nav */
+@media (max-width: 600px) {
+  .navbar-container {
+    min-height: 46px;
+  }
+  .navbar-hamburger {
+    display: block;
+    font-size: 1.6rem;
+  }
+
+  .nav-link {
+    font-weight: 500;
+    font-size: 1.2rem;
+  }
+
+  .navbar-left {
+    position: fixed;
+    top: 0;
+    right: -100vw;
+    height: 100vh;
+    width: 70vw;
+    max-width: 280px;
+    background: #fafafa;
+    flex-direction: column;
+    gap: 2.2rem;
+    padding-left: 2rem;
+    box-shadow: -30px 0 50px rgba(0, 0, 0, 0.221);
+    border-left: 1px solid rgb(218, 200, 177);
+    transition: right 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1100;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-top: 4rem;
+  }
+  .navbar-left.open {
+    right: 0;
+    background: antiquewhite;
+  }
+  .navbar-right {
+    gap: 0.9rem;
+    padding-right: 0.7rem;
+  }
+  .navbar-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.22);
+    z-index: 1099;
+  }
+}
+
+/* Hide overlay and mobile menu by default */
+.navbar-overlay {
+  display: none;
 }
